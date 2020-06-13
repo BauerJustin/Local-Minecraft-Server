@@ -12,8 +12,7 @@ def launch_instructions():
        # Open ip_address text file to see if external ip address has change
        with open("ip_address.txt") as file:
           ip = next(csv.reader(file))
-          if ip[0] != external_ip_address:
-                 new_ip = True
+          new_ip = ip[0] != external_ip_address
        # Text displayed to user
        print("/---------------------------------------/")
        print("Launch Instructions:\n")
